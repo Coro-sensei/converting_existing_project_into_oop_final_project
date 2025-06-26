@@ -36,3 +36,8 @@ class CalculatorLogic:
         except Exception:
             return "Error"
     def _is_number(self, text):
+        try:
+            float(text)
+            return True
+        except ValueError:
+            return False
