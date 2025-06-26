@@ -48,6 +48,10 @@ class CalculatorApp:
 
     
     def setup_grid(self):
+        for i in range(6):
+            self.root.grid_rowconfigure(i, weight=1)
+        for i in range(4):
+            self.root.grid_columnconfigure(i, weight=1)
     
     def bind_keys(self):
     
