@@ -14,7 +14,7 @@ class CalculatorApp:
         self.create_widgets()
         self.setup_grid()
         self.bind_keys()
-
+        self.root.geometry("500x700")
         self.root.resizable(False, False)
 
     def create_widgets(self):
