@@ -1,20 +1,27 @@
 # Logic of the App
+import re
 class CalculatorLogic:
-    def process_input(self, current_text, clicked_button_text):
+
+    def __init__(self):
+        self.valid_chars_pattern = re.compile(r'^[\d+\-*/.%() ]*$')
+
+    def process_input(self, current_text: str, btn: str) -> str:
         try:
-            if clicked_button_text == "=":
-                expression = current_text.replace("÷", "/").replace("×", "*")
-                result = eval(expression)
+            if btn == "=":
+                expr = current_text.replace("÷", "/").replace("×", "*")
+                result = eval(expr)
                 if isinstance(result, float) and result.is_integer():
                     result = int(result)
                 return str(result)
-            elif clicked_button_text == "C":
+            elif btn == "C":
                 return ""
-            elif clicked_button_text == "%":
+            elif btn == "%":
                 return str(float(current_text) / 100)
-            elif clicked_button_text == "±":
+            elif btn == "±":
                 return str(-float(current_text))
-            else:
-                return current_text + clicked_button_text
+            else:                           # digits, dot, operators
+                return current_text + btn
         except Exception:
             return "Error"
+    def _is_number(self, text):
+        
