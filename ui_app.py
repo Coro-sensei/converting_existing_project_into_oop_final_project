@@ -58,4 +58,6 @@ class CalculatorApp:
         self.root.bind("<BackSpace>", lambda event: self.handle_button_click("C"))
     
     def handle_button_click(self, button_text):
-        
+        current = self.result_var.get()
+        new_value = self.logic.process_input(current, button_text)
+        self.result_var.set(new_value)
