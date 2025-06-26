@@ -35,6 +35,16 @@ class CalculatorApp:
             ("0", 5, 0, 2), (".", 5, 2), ("=", 5, 3)
         ]
 
+        for button_info in buttons:
+            text, row, col = button_info[:3]
+            colspan = button_info[3] if len(button_info) > 3 else 1
+            button = ttk.Button(
+                self.root,
+                text=text,
+                command=lambda t=text: self.handle_button_click(t),
+                style="TButton"
+            )
+            button.grid(row=row, column=col, columnspan=colspan, sticky="nsew", ipadx=10, ipady=4, padx=5, pady=5)
 
     
     def setup_grid(self):
