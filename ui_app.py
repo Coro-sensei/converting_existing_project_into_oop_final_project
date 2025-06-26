@@ -18,6 +18,11 @@ class CalculatorApp:
         self.root.resizable(False, False)
 
     def create_widgets(self):
+        self.result_entry = ttk.Entry(self.root, 
+        textvariable=self.result_var, font=("Helvetica", 24), justify="right")
+
+        self.result_entry.grid(row = 0, column = 0, columnspan = 4, sticky ="nsew")
+
     
     def setup_grid(self):
     
