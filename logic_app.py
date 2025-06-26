@@ -8,13 +8,13 @@ class CalculatorLogic:
     def process_input(self, current_text: str, btn: str) -> str:
         try:
             if btn == "=":
-                expr = current_text.replace("÷", "/").replace("×", "*")
-                expr = expr.strip()
+                expression = current_text.replace("÷", "/").replace("×", "*")
+                expression = expression.strip()
 
-                if not self.valid_chars_pattern.fullmatch(expr):
+                if not self.valid_chars_pattern.fullmatch(expression):
                     return "Error"
 
-                result = eval(expr)
+                result = eval(expression)
                 if isinstance(result, float) and result.is_integer():
                     result = int(result)
                 return str(result)
