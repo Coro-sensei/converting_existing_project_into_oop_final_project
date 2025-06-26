@@ -9,7 +9,7 @@ class CalculatorApp:
         self.root.title("Calculator")
 
         self.logic = CalculatorLogic()
-        self.result_var = tk.StringVar
+        self.result_var = tk.StringVar()
 
         self.create_widgets()
         self.setup_grid()
