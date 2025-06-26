@@ -23,6 +23,10 @@ class CalculatorApp:
 
         self.result_entry.grid(row = 0, column = 0, columnspan = 4, sticky ="nsew")
 
+        style = ttk.Style()
+        style.theme_use("default")
+        style.configure("TButton", font =("Helvetica", 16), width=10, height=4)
+
     
     def setup_grid(self):
     
