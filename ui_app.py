@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import ttk
 from logic_app import CalculatorLogic
 class CalculatorApp:
-    def __init__(self):
+    def __init__(self,root):
         self.root = root
         self.root.title("Calculator")
 
