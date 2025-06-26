@@ -54,5 +54,8 @@ class CalculatorApp:
             self.root.grid_columnconfigure(i, weight=1)
     
     def bind_keys(self):
+        self.root.bind("<Return>", lambda event: self.handle_button_click("="))
+        self.root.bind("<BackSpace>", lambda event: self.handle_button_click("C"))
     
     def handle_button_click(self, button_text):
+        
