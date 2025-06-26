@@ -50,3 +50,5 @@ class CalculatorApp:
     def setup_grid(self):
     
     def bind_keys(self):
+    
+    def handle_button_click(self, button_text):
