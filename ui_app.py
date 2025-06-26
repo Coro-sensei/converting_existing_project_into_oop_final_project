@@ -2,7 +2,7 @@
 
 import tkinter as tk
 from tkinter import ttk
-import main
+from logic_app import CalculatorLogic
 class CalculatorApp:
     def __init__(self):
         self.root = root
