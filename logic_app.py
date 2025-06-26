@@ -1,5 +1,4 @@
 # Logic of the App
-
 class CalculatorLogic:
     def process_input(self, current_text, clicked_button_text):
         try:
